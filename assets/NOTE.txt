@@ -1,0 +1,1 @@
+Binary assets are stored directly in this public repository and served by Vercel.
