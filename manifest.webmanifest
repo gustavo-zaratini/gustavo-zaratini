@@ -1,1 +1,1 @@
-{"name":"VIRA!","short_name":"VIRA!","start_url":"/","display":"standalone","background_color":"#090311","theme_color":"#170830","icons":[{"src":"/vira-logo.jpeg","sizes":"512x512","type":"image/jpeg","purpose":"any maskable"}]}
+{"name":"VIRA!","short_name":"VIRA!","start_url":"/","scope":"/","display":"standalone","background_color":"#090311","theme_color":"#170830","icons":[{"src":"/favicon.svg?v=31","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
