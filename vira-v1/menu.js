@@ -1,1 +1,23 @@
-(()=>{function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('on'));const el=document.getElementById(id);if(el)el.classList.add('on');window.scrollTo(0,0)}document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-menu-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.menuGo)));document.querySelectorAll('#cards,#rank,#how').forEach(s=>s.addEventListener('click',e=>{if(e.target===s||e.clientY<85)go('menu')}));const back=document.getElementById('back');if(back)back.addEventListener('click',()=>setTimeout(()=>go('menu'),0));});window.viraMenu=go})();
+(()=>{
+  const screens=['menu','home','cards','rank','how','game','reveal'];
+  function go(id){
+    screens.forEach(name=>{
+      const el=document.getElementById(name);
+      if(!el)return;
+      el.classList.toggle('on',name===id);
+      el.style.display=name===id?'flex':'none';
+    });
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    document.querySelectorAll('[data-menu-go]').forEach(btn=>{
+      btn.addEventListener('click',e=>{
+        e.preventDefault();
+        e.stopPropagation();
+        go(btn.dataset.menuGo);
+      });
+    });
+    go('menu');
+  });
+  window.viraMenu=go;
+})();
