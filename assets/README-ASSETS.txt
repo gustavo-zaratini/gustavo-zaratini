@@ -1,0 +1,1 @@
+VIRA binary assets are stored as real Git blobs. Do not upload image bytes through UTF-8 text file APIs.
